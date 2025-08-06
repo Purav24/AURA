@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+
+body {
+  background: #0a0014;
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  font-size: 48px;
+  margin: 20px 0;
+  color: #d29eff;
+  text-shadow: 0 0 8px #d29eff, 0 0 16px #a64dff;
+  font-weight: 700;
+  letter-spacing: 6px;
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+}
+
+
+@keyframes pulseBox {
+  0%, 100% {
+    box-shadow: 0 0 20px #a64dff66;
+  }
+  50% {
+    box-shadow: 0 0 35px #d29effaa;
+  }
+}
+
+.message {
+  display: inline-block;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border-radius: 20px;
+  max-width: 70%;
+  word-wrap: break-word;
+  animation: fadeIn 0.4s ease; 
+}
+
+.user {
+  align-self: flex-end;
+  background: #5e1b75;
+  color: #fff;
+  text-align: right;
+  border: 1px solid #912ac7;
+}
+
+.bot {
+  align-self: flex-start;
+  background: #2c0036;
+  color: #fff;
+  border: 1px solid #aa44ff;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 0 10px #aa44ff;
+}
+
+
+button:hover {
+  background: #d29eff;
+  box-shadow: 0 0 15px #d29eff, 0 0 25px #a64dff;
+  transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 700px;
+  width: 100%;
+  height: 90vh;
+  background: linear-gradient(135deg, #160020, #1a001f);
+  border-radius: 20px;
+  box-shadow: 0 0 20px #a64dff66;
+  animation: pulseBox 3s ease-in-out infinite;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.chat-box {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  flex-grow: 1;
+  overflow-y: auto;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #3b1b4a;
+  display: flex;
+  flex-direction: column;
+}
+
+/* input box styling */
+.input-box {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+input {
+  flex: 1;
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  background: #22002a;
+  color: white;
+  font-size: 16px;
+  box-shadow: inset 0 0 5px #aa44ff55;
+}
+
+button {
+  padding: 14px 24px;
+  background: #aa44ff;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+  box-shadow: 0 0 10px #aa44ff66;
+}
+.input-area {
+  display: flex;
+  gap: 10px;
+  width: 100%; /* Make it span the full width of the container */
+  margin-top: 10px; /* Optional: add some space above */
+}
+#userInput {
+  flex: 1; /* Make input expand to fill available space */
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  background: #22002a;
+  color: white;
+  font-size: 16px;
+  box-shadow: inset 0 0 5px #aa44ff55;
+}
